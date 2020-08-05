@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+ 
+  background-image: url("img/ed.jpg");
+
+  min-height:670px;
+  
+
+ 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+
+input[type=text], input[type=password],input[type=tel] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+.btn,.btn btn-primary {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover,.btn btn-primary {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<div class="bg-img">
+  <form action="#" class="container">
+    <h3>Registration Page</h3>
+
+    <label for="Fullname"><b>Fullname</b></label>
+    <input type="text" placeholder="Enter full name " name="fname" required>
+
+    <label for="mno"><b>MobileNo</b></label>
+    <input type="tel" placeholder="Enter MobileNo " name="mno" required>
+
+    <label for="emailid"><b>Emailid</b></label>
+    <input type="text" placeholder="Enter Emailid" name="mno" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="cpsw"><b>confirm Password</b></label>
+    <input type="password" placeholder="Enter confirm Password" name="cpsw" required>
+
+    <button type="submit" class="btn">Register Here</button><br><br>
+    <button type="reset" class="btn btn-primary">Reset</button>
+  </form>
+</div>
+</body>
+</html>

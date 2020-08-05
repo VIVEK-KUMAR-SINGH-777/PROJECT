@@ -1,0 +1,23 @@
+header 
+{
+padding: 0vmin;
+margin: 0vmin;
+font-size: xx-large;
+font-weight: bolder;
+font-optical-sizing: 15px;
+}
+#myform{
+    padding: 7px;
+    margin: 7cm;
+    text-align: center;
+    text-decoration: solid;
+    column-width: auto;
+
+}
+#register
+{
+    padding:8px;
+    margin: 6.6cm;
+    text-align: center;
+    column-width: auto;
+}
