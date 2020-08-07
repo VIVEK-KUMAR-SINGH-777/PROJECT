@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+<script>
+
+
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+function bigImg(x) {
+  x.style.height = "64px";
+  x.style.width = "64px";
+}
+
+function normalImg(x) {
+  x.style.height = "32px";
+  x.style.width = "32px";
+}
+</script>
+</head>
+<body>
+
+<p>Html Events :</p>
+<p id="demo"></p>
+
+<button onclick="displayDate()">The time is?</button><br><br>
+
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+
+<img id="drag1" src="img/background.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
+<br>
+
+
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="img/background.png" alt="Smiley" width="32" height="32">
+
+</body>
+</html>
